@@ -170,8 +170,8 @@ void next(char userBoard[][boardSize]) {
 
 int countNeighbors(int iRow, int iCol, char filledBoard[][boardSize]) {
     int numNeighbors = 0;
-    for (int i = -1; i < 2; i++) {
-        for (int j = -1; j < 2; j++) {
+    for (int i = -1; i <= 1; i++) {
+        for (int j = -1; j <= 1; j++) {
             // Only include spaces within the 40 by 40 board, ensure the loop does not check beyond the bounds
             if ((iRow+i >= 0) && (iRow+i < boardSize) && (iCol+j >= 0) && (iCol+j < boardSize)) {
                 if (filledBoard[iRow+i][iCol+j] == 'X') {
