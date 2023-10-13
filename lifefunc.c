@@ -16,13 +16,10 @@
 int getMode(int numArgs) {
     switch (numArgs) {
         // A value of one will represent Interactive mode
-        case 1:
-            return 1;
-            break;
         // A value of two will represent Batch mode
+        case 1:
         case 2:
-            return 2;
-            break;
+            return numArgs;
         // Display an error if too many arguments are passed
         default:
             printf("Error: Too Many Arguments");
