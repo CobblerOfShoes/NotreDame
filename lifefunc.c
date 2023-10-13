@@ -173,7 +173,7 @@ int countNeighbors(int iRow, int iCol, char filledBoard[][boardSize]) {
     for (int i = -1; i < 2; i++) {
         for (int j = -1; j < 2; j++) {
             // Only include spaces within the 40 by 40 board, ensure the loop does not check beyond the bounds
-            if ((iRow+i >= 0) && (iRow+i <= 39) && (iCol+j >= 0) && (iCol+j <= 39)) {
+            if ((iRow+i >= 0) && (iRow+i < boardSize) && (iCol+j >= 0) && (iCol+j < boardSize)) {
                 if (filledBoard[iRow+i][iCol+j] == 'X') {
                     // Do not include i = 0 and j = 0, only consider surrounding cells
                     if (!(i == 0 && j == 0)) {
